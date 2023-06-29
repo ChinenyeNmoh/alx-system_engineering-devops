@@ -4,6 +4,6 @@
 i=0
 while (( i < 10 ))
 do
-sleep 2
 echo "To infinity and beyond"
+sleep 2
 done

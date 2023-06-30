@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# This script Starts/Stops/Restarts manage_my_process script
+
+file="/var/run/my_process.pid"
+if [ "${1}" == "start" ]
+then
+trap 'echo "manage_my_process started"' 0
+    ./manage_my_process &
+    echo "$!" >> "$file"
+    exit 0
+elif [ "${1}" == "stop" ]
+then
+trap 'echo "manage_my_process stopped"' 0
+kill "$(cat /var/run/my_process.pid)"
+rm -f "$file"
+exit 0
+elif [ "${1}" == "restart" ]
+then
+trap 'echo "manage_my_process restarted"' 0
+    kill "$(cat /var/run/my_process.pid)"
+    rm -f "$file"
+    ./manage_my_process &
+    echo "$!" > /var/run/my_process.pid
+exit 0
+else
+echo "Usage: manage_my_process {start|stop|restart}"
+fi

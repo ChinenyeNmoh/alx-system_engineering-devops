@@ -6,7 +6,7 @@ if [ "${1}" == "start" ]
 then
 trap 'echo "manage_my_process started"' 0
     ./manage_my_process &
-    echo "$!" >> "$file"
+    echo "$!" > "$file"
     exit 0
 elif [ "${1}" == "stop" ]
 then

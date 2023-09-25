@@ -24,9 +24,9 @@ if __name__ == '__main__':
                         title = paras['title']
                         status = paras["completed"]
                         csvfile.write(
-                        '"{}","{}","{}","{}"\n'.format(
-                                                argv[1],
-                                                username,
-                                                status,
-                                                title
-                                                ))
+                                '"{}","{}","{}","{}"\n'.format(
+                                                        argv[1],
+                                                        username,
+                                                        status,
+                                                        title
+                                                        ))

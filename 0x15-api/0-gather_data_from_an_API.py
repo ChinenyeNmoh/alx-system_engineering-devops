@@ -25,8 +25,10 @@ if __name__ == '__main__':
             user = response.json()
             for i in user:
                 names = i['name']
-                print(
-                    f"Employee {names}is done with tasks "
-                    f"({completed}/{count}):")
+                print('Employee {} is done with tasks({}/{}):'.format(
+                    names,
+                    completed,
+                    count
+                ))
                 for line in title_list:
                     print(f"\t {line}")

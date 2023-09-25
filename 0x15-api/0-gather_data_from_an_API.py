@@ -26,7 +26,7 @@ if __name__ == '__main__':
             for i in user:
                 names = i['name']
                 print(
-                    f"Employee {names}is done with tasks"
+                    f"Employee {names}is done with tasks "
                     f"({completed}/{count}):")
                 for line in title_list:
                     print(f"\t {line}")

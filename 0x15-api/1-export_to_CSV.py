@@ -23,4 +23,9 @@ if __name__ == '__main__':
                     for paras in todos:
                         title = paras['title']
                         status = paras["completed"]
-                        csvfile.write(f'"{argv[1]}", "{username}", "{status}", "{title}"\n')
+                        csvfile.write(
+                                f'"{argv[1]}",
+                                "{username}",
+                                "{status}",
+                                "{title}"\n'
+                        )
